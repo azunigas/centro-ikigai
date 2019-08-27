@@ -55,6 +55,7 @@
     margin: 0 auto;
 }
 
+/*Flip Cards*/
 .flip-card {
     margin: 15px 0 15px 0;
     height: 350px;
@@ -70,7 +71,12 @@
     transform-style: preserve-3d;
 }
 
+/*
 .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+*/
+.flip-card.flip .flip-card-inner {
     transform: rotateY(180deg);
 }
 
@@ -97,7 +103,7 @@
     transform: rotateY(180deg);
 }
 
-
+/*Flip Cards*/
 
 span{
     color: white;
