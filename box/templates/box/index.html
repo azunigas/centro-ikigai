@@ -121,11 +121,11 @@
     <!--Fin Servicios -->
 
     <!--Box-->
-    <div class="container-fluid text-center" id="box">
+    <div class="container-fluid text-center seccion" id="box">
 
         <h2>Box</h2><br>
         <h4>What we have created</h4>
-        <div class="row boxes text-center slideanim">
+        <div class="row boxes text-center justify-content-center slideanim">
             {% if box %}
                 {% for b in box %}
                     <div class="flip-card col-xs-12 col-sm-6 col-md-4">
@@ -138,7 +138,7 @@
                                 </div>
                             </div>
                             <div class="flip-card-back">
-                                <h1>{{ b.nombre }}</h1>
+                                <h1><strong>{{ b.nombre }}</strong></h1>
                                 <p>Equipamiento</p>
                                 <p>{{ b.equipamiento }}</p>
                             </div>
@@ -162,7 +162,7 @@
 
         <div class="row justify-content-center slideanim">
 
-            <div class="col-xs-12 col-sm-3">
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
                 <div class="panel panel-default text-center">
 
                     <div class="panel-heading">
@@ -170,19 +170,19 @@
                     </div>
 
                     <div class="panel-body">
-                        <p><strong>Mañana: (8am - 2pm)</strong></p>
-                        <p>DESDE</p>
-                        <p><strong>$5.400</strong></p>
-                        <p><strong>Tarde: (2pm - 9 pm)</strong></p>
-                        <p>DESDE</p>
-                        <p><strong>$6.000</strong></p>
-                        <p>* Valores IVA incluído.</p>
+                        <p class="horario">Mañana: (8am - 2pm)</p>
+                        <p class="inf">DESDE</p>
+                        <p class="valor">$5.400</p>
+                        <p class="horario">Tarde: (2pm - 9 pm)</p>
+                        <p class="inf">DESDE</p>
+                        <p class="valor">$6.000</p>
+                        <p style="padding-bottom: 10px">* Valores IVA incluído.</p>
                     </div>
 
                 </div>
             </div>
 
-            <div class="col-xs-12 col-sm-4">
+            <div class="col-xs-12 col-sm-7 col-md-6 col-lg-5">
                 <div class="panel panel-default text-center">
 
                     <div class="panel-heading">
@@ -190,25 +190,25 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6 panels">
-                            <p><strong>10 hrs. AM</strong></p>
-                            <p>(AHORRO $10.800)</p>
-                            <p><strong>$43.200</strong></p>
-                            <p><strong>10 hrs. PM</strong></p>
-                            <p>(AHORRO $12.000)</p>
-                            <p><strong>$48.000</strong></p>
+                            <p class="horario">10 hrs. AM</p>
+                            <p class="inf">(AHORRO $10.800)</p>
+                            <p class="valor">$43.200</p>
+                            <p class="horario">10 hrs. PM</p>
+                            <p class="inf">(AHORRO $12.000)</p>
+                            <p class="valor">$48.000</p>
                         </div>
 
                         <div class="col-md-6 panels">
-                            <p><strong>20 hrs. AM</strong></p>
-                            <p>(AHORRO $32.400)</p>
-                            <p><strong>$75.200</strong></p>
-                            <p><strong>20 hrs. PM</strong></p>
-                            <p>(AHORRO $36.000)</p>
-                            <p><strong>$84.000</strong></p>
+                            <p class="horario">20 hrs. AM</p>
+                            <p class="inf">(AHORRO $32.400)</p>
+                            <p class="valor">$75.200</p>
+                            <p class="horario">20 hrs. PM</p>
+                            <p class="inf">(AHORRO $36.000)</p>
+                            <p class="valor">$84.000</p>
 
                         </div>
                     </div>
-                    <p>* Valores IVA incluído.</p>
+                    <p style="padding-bottom: 10px">* Valores IVA incluído.</p>
                 </div>
             </div>
 
@@ -266,7 +266,7 @@
 
                     <div class="row">
                         <div class="col-sm-12 form-group">
-                            <button class="btn btn-default pull-right" type="submit">Enviar</button>
+                            <button class="btn btn-primary" type="submit">Enviar</button>
                         </div>
                     </div>
 
