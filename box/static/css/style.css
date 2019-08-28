@@ -82,12 +82,14 @@
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .flip-card-front img{
-    border-radius: 10px 10px 0 0;
+    border-radius: 5px 5px 0 0;
+    width:100%;
+    height:300px;
 }
 
 .flip-card-front {
@@ -100,14 +102,16 @@
 }
 
 .flip-card-back {
-    padding-top: 50px;
+    padding: 20px 5px 5px 5px;
     background: linear-gradient(0deg, rgba(35,38,153,1) 0%, rgba(35,81,168,1) 35%, rgba(143,148,247,1) 100%);
     color: white;
     transform: rotateY(180deg);
 }
 
 .equip{
-    padding: 30px;
+    display: table;
+    padding: 0 0 10px 0;
+    font-size: 2.5vh;
 }
 /*Fin Box Flip Cards*/
 
@@ -224,7 +228,7 @@ p i {
     overflow-y: auto;
     background-color: #fefefe;
     margin: auto;
-    padding: 60px;
+    padding: 40px;
     border: 1px solid #888;
     width: 80%;
 }

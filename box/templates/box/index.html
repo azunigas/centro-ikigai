@@ -126,17 +126,17 @@
         <div class="row boxes text-center justify-content-center slideanim">
             {% if box %}
                 {% for b in box %}
-                    <div class="flip-card col-xs-12 col-sm-6 col-md-4">
+                    <div class="flip-card col-xs-5 col-sm-4 col-md-3">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
 
-                                <img src="{{ b.imagen.url }}" alt="box" style="width:100%;height:300px;">
+                                <img src="{{ b.imagen.url }}" alt="box">
                                 <div class="container">
                                     <h4><b style="color: gray">{{ b.nombre }}</b></h4>
                                 </div>
                             </div>
                             <div class="flip-card-back">
-                                <h1><strong >{{ b.nombre }}</strong></h1>
+                                <h3><strong>{{ b.nombre }}</strong></h3>
                                 <p>Equipamiento</p>
                                 <p class="equip">{{ b.equipamiento }}</p>
                             </div>
