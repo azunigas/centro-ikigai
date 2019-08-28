@@ -10,3 +10,12 @@ class Box(models.Model):
 
     def __str__(self):
         return self.nombre
+
+
+class Mensaje(models.Model):
+    nombre = models.CharField(max_length=50)
+    correo = models.EmailField()
+    mensaje = models.TextField(max_length=170)
+
+    def __str__(self):
+        return self.correo

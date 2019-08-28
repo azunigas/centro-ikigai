@@ -431,8 +431,8 @@
                 </div>
             </div>
 
-            <form class="col-md-6" action="post" onsubmit="return valida_contacto()">
-
+            <form class="col-md-6" action="{% url 'box:consulta' %}" method="post" onsubmit="return valida_contacto()">
+                {% csrf_token %}
                 <div class="slideanim">
 
                     <div class="row">
@@ -458,9 +458,16 @@
                     <div class="alert alert-warning collapse" id="valmensaje"></div>
                     <br>
 
-                    <div class="row">
-                        <div class="col-sm-12 form-group">
+                    <div class="row" style="align-items: center">
+                        <div class="col-sm-2 form-group">
                             <button class="btn btn-primary" type="submit">Enviar</button>
+                        </div>
+                        <div class="col-sm-5">
+                            {% if mensaje %}
+                                <div class="alert alert-success" role="alert" style="padding: 7px; text-align: center">
+                                    {{ mensaje }}
+                                </div>
+                            {% endif %}
                         </div>
                     </div>
 
