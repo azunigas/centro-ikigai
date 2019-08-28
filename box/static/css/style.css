@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.navbar{
+.navbar {
     background-image: linear-gradient(to top, #4645a1, #4844aa, #4b42b2, #4e40bb, #523ec3);
 }
 
@@ -15,17 +15,18 @@
     border-radius: 0;
 }
 
-.seccion{
+.seccion {
     padding: 15px 15px 15px 15px;
     font-family: 'Quicksand', sans-serif;
 }
 
-#nosotros{
+#nosotros {
     font-size: 17px;
     text-align: justify;
 }
 
-#servicios{
+#servicios {
+    background-color: #fcfcfc;
 }
 
 .logo-small {
@@ -43,23 +44,26 @@
     width: 100%;
     height: 450px;
 }
+
 /*Fin Slide*/
 
 /*Social*/
-.social p a i{
+.social p a i {
     padding: 0 5px 0 0;
 }
+
 /*Fin Social*/
 
-.boxes{
-    margin: 0 auto;
-}
-
 /* Box Flip Cards*/
+
 .flip-card {
     margin: 15px 0 15px 0;
     height: 350px;
     perspective: 2500px;
+}
+
+.flip-card-front {
+    background-color: white;
 }
 
 .flip-card-inner {
@@ -70,7 +74,6 @@
     transition: transform 0.6s;
     transform-style: preserve-3d;
 }
-
 
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
@@ -83,95 +86,115 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.flip-card-front img{
+.flip-card-front img {
     border-radius: 5px 5px 0 0;
-    width:100%;
-    height:300px;
+    width: 100%;
+    height: 300px;
 }
 
 .flip-card-front {
     color: black;
 }
 
-.flip-card-front .container h4{
+.flip-card-front .container h4 {
     margin: 0;
     padding: 10px;
 }
 
 .flip-card-back {
     padding: 20px 5px 5px 5px;
-    background: linear-gradient(0deg, rgba(35,38,153,1) 0%, rgba(35,81,168,1) 35%, rgba(143,148,247,1) 100%);
+    background: linear-gradient(0deg, rgba(35, 38, 153, 1) 0%, rgba(35, 81, 168, 1) 35%, rgba(143, 148, 247, 1) 100%);
     color: white;
     transform: rotateY(180deg);
 }
 
-.equip{
-    padding: 0 0 10px 0;
-    font-size: 2.5vh;
+.equip {
+    padding: 0 10px 10px 10px;
+    font-size: 2.7vh;
 }
+
 /*Fin Box Flip Cards*/
 
 /*Valores*/
-.panel{
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+#valores {
+    background-color: #fcfcfc;
 }
 
-.panel-heading{
-    background: linear-gradient(0deg, rgba(98,51,172,1) 32%, rgba(163,143,247,1) 100%);
+.panel {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.panel-heading {
+    background: linear-gradient(0deg, rgba(98, 51, 172, 1) 32%, rgba(163, 143, 247, 1) 100%);
     height: 70px;
     padding: 20px;
     color: white;
     align-items: center;
 }
 
-.panel-heading h5{
+.panel-heading h5 {
     font-size: 15px;
     margin: 0;
 }
 
-.panel-body, .panels{
-    padding: 10px 0 0 0;
+.panel-body, .panel {
+    background-color: #fff;
 }
 
-.valor{
+.panel-body, .panels {
+    padding-top: 10px;
+}
+
+.valor {
     color: #D0A90B;
     font-size: 25px;
     font-weight: bold;
 }
 
-.horario{
+.horario {
     font-weight: bold;
     font-size: 18px;
 }
 
-.inf{
+.inf {
     font-size: 13px;
 }
+
 /*Fin Valores*/
 
 /*Contacto*/
+
+#contacto {
+    background-color: #fcfcfc;
+}
+
 p i {
     font-size: 20px;
     padding: 0 5px 0 0;
 }
+
 /*Fin Contacto*/
 
-.footer{
+.footer {
     text-align: center;
-    padding:10px;
+    padding: 10px;
     color: white;
     width: 100%;
 }
 
-.alert{
+.alert {
     margin: 3px;
 }
 
 /*Animation*/
-.slideanim {visibility:hidden;}
+.slideanim {
+    visibility: hidden;
+}
+
 .slide {
     /* The name of the animation */
     animation-name: slide;
@@ -194,6 +217,7 @@ p i {
         transform: translateY(0%);
     }
 }
+
 @-webkit-keyframes slide {
     0% {
         opacity: 0;
@@ -207,7 +231,6 @@ p i {
 
 /* The Modal (background) */
 .modal {
-    scroll-behavior: smooth;
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -216,8 +239,8 @@ p i {
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -235,8 +258,6 @@ p i {
 /* The Close Button */
 .close {
     color: #aaaaaa;
-    float: right;
-    font-size: 28px;
     font-weight: bold;
 }
 
@@ -247,11 +268,11 @@ p i {
     cursor: pointer;
 }
 
-#myBtn{
+#myBtn {
     color: cornflowerblue;
 }
 
-#myBtn:hover{
+#myBtn:hover {
     text-decoration: underline;
     cursor: pointer;
 }
