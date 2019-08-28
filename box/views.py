@@ -12,6 +12,3 @@ class BoxView(generic.ListView):
     def get_queryset(self):
         return Box.objects.all()
 
-
-def termview(request):
-    return render(request, 'box/termycond.html')

@@ -6,5 +6,4 @@ app_name = 'box'
 
 urlpatterns = [
     path('', views.BoxView.as_view(), name='boxview'),
-    path('terminos/', views.termview, name='terms'),
 ]

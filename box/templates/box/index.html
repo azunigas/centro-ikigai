@@ -4,7 +4,7 @@
     {% load static %}
 
     <div class="jumbotron jumbotron-fluid text-center" style="margin-bottom:0">
-        <img src="{% static 'images/logo-ikigai-01.svg' %}" alt="">
+        <img src="{% static 'images/logo-ikigai-01.svg' %}" alt="logo">
         <p>El lugar que buscabas</p>
 
     </div>
@@ -53,21 +53,21 @@
         <div class="row slideanim service-item">
 
             <div class="col-sm-4">
-                <i class="fas fa-couch fa-2x logo-small"></i>
+                <i class="fas fa-couch logo-small"></i>
                 <h4>EQUIPAMIENTO</h4>
                 <p>Mobiliario nuevo y de vanguardia</p>
             </div>
 
             <div class="col-sm-4">
-                <i class="fas fa-building fa-2x logo-small"></i>
+                <i class="fas fa-building logo-small"></i>
                 <h4>INFRAESTRUCTURA</h4>
                 <p>Instalaciones modernas</p>
             </div>
 
             <div class="col-sm-4">
-                <i class="fab fa-pagelines fa-2x logo-small"></i>
-                <h4>AMBIENTE</h4>
-                <p>Creado para entrar en un ambiente totalmente armónico de paz y buenas energías</p>
+                <i class="fas fa-mobile-alt logo-small"></i>
+                <h4>ACCESIBILIDAD</h4>
+                <p>Facilidad para reservar tu box desde celulares o pc</p>
             </div>
 
         </div>
@@ -75,20 +75,19 @@
         <div class="row slideanim service-item">
 
             <div class="col-sm-4">
-                <i class="fas fa-mobile-alt fa-2x logo-small"></i>
-
-                <h4>ACCESIBILIDAD</h4>
-                <p>Facilidad para reservar tu box desde celulares o pc</p>
+                <i class="fab fa-pagelines logo-small"></i>
+                <h4>AMBIENTE</h4>
+                <p>Creado para entrar en un ambiente totalmente armónico de paz y buenas energías</p>
             </div>
 
             <div class="col-sm-4">
-                <i class="fas fa-wifi fa-2x logo-small"></i>
+                <i class="fas fa-wifi logo-small"></i>
                 <h4>WI-FI</h4>
                 <p>Wifi disponible y gratis</p>
             </div>
 
             <div class="col-sm-4">
-                <i class="fas fa-door-open fa-2x logo-small"></i>
+                <i class="fas fa-door-open logo-small"></i>
                 <h4 style="color:#303030;">ACCESO</h4>
                 <p>Acceso personalizado mediante clave en cerradura digital, lo que te permite una mayor independencia</p>
             </div>
@@ -98,23 +97,22 @@
         <div class="row slideanim service-item">
 
             <div class="col-sm-4">
-                <i class="fas fa-hand-holding-usd fa-2x logo-small"></i>
+                <i class="fas fa-people-carry logo-small"></i>
+                <h4 style="color:#303030;">ADAPTABILIDAD</h4>
+                <p>Disponibilidad de implementos para profesionalizar tu atención, como balanza, camillas, pizarra, cafeteras, nos adaptamos a tus necesidades</p>
+            </div>
+
+            <div class="col-sm-4">
+                <i class="fas fa-hand-holding-usd logo-small"></i>
                 <h4 style="color:#303030;">VALORES</h4>
                 <p>Valores de mercado</p>
             </div>
 
             <div class="col-sm-4">
-                <i class="fas fa-door-open fa-2x logo-small"></i>
+                <i class="fas fa-hand-holding-heart logo-small"></i>
                 <h4 style="color:#303030;">PROMOCIONES</h4>
                 <p>Acceso a promociones y mas beneficios para terapeutas socios</p>
             </div>
-
-            <div class="col-sm-4">
-                <i class="fas fa-hands-helping fa-2x logo-small"></i>
-                <h4 style="color:#303030;">ADAPTABILIDAD</h4>
-                <p>Disponibilidad de implementos para profesionalizar tu atención, como balanza, camillas, pizarra, cafeteras, nos adaptamos a tus necesidades</p>
-            </div>
-
 
         </div>
     </div>
@@ -124,7 +122,7 @@
     <div class="container-fluid text-center seccion" id="box">
 
         <h2>Box</h2><br>
-        <h4>What we have created</h4>
+        <h4>Encuentra el tuyo</h4>
         <div class="row boxes text-center justify-content-center slideanim">
             {% if box %}
                 {% for b in box %}
@@ -134,19 +132,19 @@
 
                                 <img src="{{ b.imagen.url }}" alt="box" style="width:100%;height:300px;">
                                 <div class="container">
-                                    <h4><b>{{ b.nombre }}</b></h4>
+                                    <h4><b style="color: gray">{{ b.nombre }}</b></h4>
                                 </div>
                             </div>
                             <div class="flip-card-back">
-                                <h1><strong>{{ b.nombre }}</strong></h1>
+                                <h1><strong >{{ b.nombre }}</strong></h1>
                                 <p>Equipamiento</p>
-                                <p>{{ b.equipamiento }}</p>
+                                <p class="equip">{{ b.equipamiento }}</p>
                             </div>
                         </div>
                     </div>
                 {% endfor %}
             {% else %}
-                <p>Error</p>
+                <p>Agregar Box</p><i class="far fa-grin-beam-sweat"></i>
             {% endif %}
         </div>
     </div>
@@ -161,12 +159,11 @@
         </div>
 
         <div id="myModal" class="modal">
-
             <!-- Modal content -->
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <div class="">
-                    <img src="{% static 'images/logo-ikigai-01.svg' %}" alt="logo" style="width: 100px">
+                    <img src="{% static 'images/logo-ikigai-01.svg' %}" alt="logo" style="width: 200px; background-color: darkgray">
                     <p class="text-center"><strong>TERMINOS Y CONDICIONES</strong></p>
                 </div>
                 <div class="">
@@ -243,9 +240,7 @@
                     </div>
                 </div>
             </div>
-
         </div>
-
 
         <div class="row justify-content-center slideanim">
 

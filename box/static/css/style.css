@@ -29,7 +29,7 @@
 }
 
 .logo-small {
-    color: blue;
+    color: #6341f4;
     font-size: 40px;
 }
 
@@ -96,14 +96,18 @@
 
 .flip-card-front .container h4{
     margin: 0;
-    padding: 5px;
+    padding: 10px;
 }
 
 .flip-card-back {
-    padding-top: 40px;
+    padding-top: 50px;
     background: linear-gradient(0deg, rgba(35,38,153,1) 0%, rgba(35,81,168,1) 35%, rgba(143,148,247,1) 100%);
     color: white;
     transform: rotateY(180deg);
+}
+
+.equip{
+    padding: 30px;
 }
 /*Fin Box Flip Cards*/
 
@@ -137,7 +141,7 @@
 
 .horario{
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .inf{
@@ -200,6 +204,8 @@ p i {
 
 /* The Modal (background) */
 .modal {
+
+    scroll-behavior: smooth;
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -238,8 +244,12 @@ p i {
     cursor: pointer;
 }
 
+#myBtn{
+    color: cornflowerblue;
+}
+
 #myBtn:hover{
-    color: #D0A90B;
+    text-decoration: underline;
     cursor: pointer;
 }
 
