@@ -5,7 +5,13 @@ from django.views import generic
 # Create your views here.
 
 
-def boxview(request):
-    box = Box.objects.all()
-    return render(request, 'box/index.html', {'box': box})
+class BoxView(generic.ListView):
+    template_name = 'box/index.html'
+    context_object_name = 'box'
 
+    def get_queryset(self):
+        return Box.objects.all()
+
+
+def termview(request):
+    return render(request, 'box/termycond.html')

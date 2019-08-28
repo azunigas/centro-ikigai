@@ -1,7 +1,10 @@
 from django.urls import path
-from .views import boxview
+from . import views
 
+
+app_name = 'box'
 
 urlpatterns = [
-    path('', boxview, name='boxview')
+    path('', views.BoxView.as_view(), name='boxview'),
+    path('terminos/', views.termview, name='terms'),
 ]

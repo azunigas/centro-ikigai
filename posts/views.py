@@ -9,24 +9,12 @@ import json
 
 
 # Create your views here.
-def index(request):
-    results = Feed.objects.all()
-    jsondata = serializers.serialize('json', results)
-    context = {
-        'results': results,
-        'jsondata': jsondata,
-    }
-    return render(request, 'posts/index.html', context)
 
 
 def getdata(request):
     results = Feed.objects.all()
     jsondata = serializers.serialize('json', results)
     return HttpResponse(jsondata)
-
-
-def base_layout(request):
-    return render(request, 'posts/base.html')
 
 
 class FeedView(viewsets.ModelViewSet):
