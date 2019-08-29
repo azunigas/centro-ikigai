@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Box, Mensaje
 from django.views import generic
-from django.http import HttpResponseRedirect
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -21,5 +21,4 @@ def consultaView(request):
         mensaje = request.POST.get('mensaje', '')
         mensaje = Mensaje.objects.create(nombre=nombre, correo=correo, mensaje=mensaje)
         mensaje.save()
-        return HttpResponseRedirect('/#contacto', {'mensaje': 'Mensaje enviado con exito'})
-
+        return HttpResponse('')

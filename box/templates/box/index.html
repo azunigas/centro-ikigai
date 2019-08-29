@@ -171,7 +171,7 @@
             <div class="modal-content">
 
                 <div class="text-center">
-                    <span class="close" style="font-size: 2.5rem;">&times;</span>
+                    <span class="close" style="font-size: 2.5rem; color: #523ec3">&times;</span>
                     <img src="{% static 'images/logo-ikigai-01.svg' %}" alt="logo"
                          style="width: 200px; background-color: darkgray">
 
@@ -343,7 +343,7 @@
                         Providencia y se someten a la jurisdicción de los Tribunales de Justicia de la ciudad de
                         Santiago.</p>
                 </div>
-                <button class="close2">Cerrar</button>
+                <button class="close2 btn btn-primary">Aceptar</button>
             </div>
 
         </div>
@@ -431,7 +431,7 @@
                 </div>
             </div>
 
-            <form class="col-md-6" action="{% url 'box:consulta' %}" method="post" onsubmit="return valida_contacto()">
+            <form class="col-md-6" action="{% url 'box:consulta' %}" method="post" id="question_form">
                 {% csrf_token %}
                 <div class="slideanim">
 
@@ -462,16 +462,15 @@
                         <div class="col-sm-2 form-group">
                             <button class="btn btn-primary" type="submit">Enviar</button>
                         </div>
-                        <div class="col-sm-5">
-                            {% if mensaje %}
-                                <div class="alert alert-success" role="alert" style="padding: 7px; text-align: center">
-                                    {{ mensaje }}
-                                </div>
-                            {% endif %}
+
+                        <div class="alert alert-success alert-dismissible fade" role="alert" id="msjEnviado">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
+
                     </div>
 
-                </div>
 
             </form>
         </div>
@@ -509,6 +508,60 @@
                 modal.style.display = "none";
             }
         }
+    </script>
+
+    <script type="text/javascript">
+
+        var form = document.querySelector('#question_form');
+        $(document).on('submit', '#question_form', function (e) {
+            e.preventDefault();
+
+            $('#valnombre').hide();
+            $('#valcorreo').hide();
+            $('#valmensaje').hide();
+            $('#msjEnviado').hide();
+            var nombre, correo, mensaje, regex;
+            nombre = document.getElementById('nombre').value;
+            correo = document.getElementById('correo').value;
+            mensaje = document.getElementById('mensaje').value;
+            regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+            if (nombre === "") {
+                $('#valnombre').text('Debe Ingresar su nombre');
+                $('#valnombre').show();
+                return false;
+            } else if (regex.test(correo) === false) {
+                $('#valcorreo').text('Correo no valido');
+                $('#valcorreo').show();
+                return false;
+            } else if (mensaje === "") {
+                $('#valmensaje').text('Debe Ingresar comentario');
+                $('#valmensaje').show();
+                return false;
+            } else if (regex.test(correo)) {
+                $.ajax({
+                    type: 'POST',
+                    url: 'mensaje/',
+                    data: {
+                        nombre: $('#nombre').val(),
+                        correo: $('#correo').val(),
+                        mensaje: $('#mensaje').val(),
+                        csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
+                    },
+                    success: function () {
+                        var element = document.getElementById("msjEnviado");
+                        element.classList.add("show");
+                        $('#msjEnviado').text('Mensaje enviado correctamente');
+                        $('#msjEnviado').show();
+                    }
+                });
+                form.reset();
+                return true;
+            }
+
+
+        });
+
     </script>
 
 {% endblock %}
