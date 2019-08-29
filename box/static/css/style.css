@@ -187,7 +187,7 @@ p i {
 }
 
 .alert {
-    margin: 3px;
+    top: 3px;
 }
 
 /*Animation*/
@@ -276,4 +276,3 @@ p i {
     text-decoration: underline;
     cursor: pointer;
 }
-
