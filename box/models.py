@@ -14,7 +14,7 @@ class Box(models.Model):
 
 class Mensaje(models.Model):
     nombre = models.CharField(max_length=50)
-    correo = models.EmailField()
+    correo = models.EmailField(max_length=50)
     mensaje = models.TextField(max_length=170)
 
     def __str__(self):

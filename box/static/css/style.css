@@ -105,15 +105,15 @@
 }
 
 .flip-card-back {
-    padding: 20px 5px 5px 5px;
+    padding: 30px 5px 5px 5px;
     background: linear-gradient(0deg, rgba(35, 38, 153, 1) 0%, rgba(35, 81, 168, 1) 35%, rgba(143, 148, 247, 1) 100%);
     color: white;
     transform: rotateY(180deg);
 }
 
 .equip {
-    padding: 0 10px 10px 10px;
-    font-size: 2.7vh;
+    padding: 0 25px 10px 25px;
+    font-size: 110%;
 }
 
 /*Fin Box Flip Cards*/
@@ -188,6 +188,8 @@ p i {
 
 .alert {
     top: 3px;
+    font-size: 2vh;
+    width: fit-content;
 }
 
 /*Animation*/
@@ -259,6 +261,10 @@ p i {
 .close {
     color: #aaaaaa;
     font-weight: bold;
+}
+
+.close2 {
+    -webkit-appearance: none;
 }
 
 .close:hover,
