@@ -263,10 +263,6 @@ p i {
     font-weight: bold;
 }
 
-.close2 {
-    -webkit-appearance: none;
-}
-
 .close:hover,
 .close:focus {
     color: #000;
