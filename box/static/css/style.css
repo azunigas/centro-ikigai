@@ -278,3 +278,6 @@ p i {
     text-decoration: underline;
     cursor: pointer;
 }
+
+.clickable {
+cursor: pointer;}
