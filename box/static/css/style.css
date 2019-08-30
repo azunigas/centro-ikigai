@@ -258,17 +258,6 @@ p i {
 }
 
 /* The Close Button */
-.close {
-    color: #aaaaaa;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
 
 #myBtn {
     color: cornflowerblue;
@@ -278,6 +267,3 @@ p i {
     text-decoration: underline;
     cursor: pointer;
 }
-
-.clickable {
-cursor: pointer;}
