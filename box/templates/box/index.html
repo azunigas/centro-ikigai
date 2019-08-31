@@ -435,29 +435,33 @@
                 {% csrf_token %}
                 <div class="slideanim">
                     <div class="row">
-                        <div class="col-sm-6 form-group">
-                            <input class="form-control" id="nombre" name="nombre" placeholder="Nombre" type="text">
+                        <div class="col-sm-6 col-md-12 col-lg-6 form-group">
+                            <input class="form-control" id="nombre" name="nombre" placeholder="Nombre" type="text"
+                                   maxlength="50">
                             <div class="alert p-1 mb-0 alert-warning collapse" id="valnombre"></div>
                         </div>
 
-                        <div class="col-sm-6 form-group">
+                        <div class="col-sm-6 col-md-12 col-lg-6 form-group">
                             <input type="email" class="form-control" id="correo" name="correo"
-                                   placeholder="Correo Electronico">
+                                   placeholder="Correo Electronico" maxlength="50">
                             <div class="alert p-1 mb-0 alert-warning collapse" id="valcorreo"></div>
                         </div>
                     </div>
 
                     <textarea class="form-control" id="mensaje" name="mensaje" placeholder="Mensaje"
-                              rows="5"></textarea>
+                              rows="4" maxlength="170"></textarea>
                     <div class="alert p-1 mb-0 alert-warning collapse" id="valmensaje"></div>
-                    <div class="alert p-1 mb-0 alert-success fade" role="alert" id="msjEnviado">
-                        Mensaje enviado correctamente
-                    </div>
+
                     <br>
 
-                    <div class="row" style="align-items: center">
-                        <div class="col-sm-2 form-group">
+                    <div class="row justify-content-center" style="align-content: center">
+                        <div class=" col-2 form-group">
                             <button class="btn btn-primary" type="submit">Enviar</button>
+                        </div>
+                        <div class="col-10">
+                            <div class="alert ml-3 p-1 mb-0 alert-success fade show" role="alert" id="msjEnviado">
+                                Mensaje enviado correctamente
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -500,26 +504,22 @@
     </script>
 
     <script type="text/javascript">
-
-        var form = document.querySelector('#question_form');
+        let form = document.querySelector('#question_form');
         $(document).on('submit', '#question_form', function (e) {
             e.preventDefault();
-
-            var idnombre = document.getElementById("valnombre");
-            var idcorreo = document.getElementById("valcorreo");
-            var idmensaje = document.getElementById("valmensaje");
-            var idmsjenviado = document.getElementById("msjEnviado");
-
+            let idnombre = document.getElementById("valnombre");
+            let idcorreo = document.getElementById("valcorreo");
+            let idmensaje = document.getElementById("valmensaje");
+            let idmsjenviado = document.getElementById("msjEnviado");
             $(idnombre).hide();
             $(idcorreo).hide();
             $(idmensaje).hide();
             $(idmsjenviado).hide();
-            var nombre, correo, mensaje, regex;
+            let nombre, correo, mensaje, regex;
             nombre = document.getElementById('nombre').value;
             correo = document.getElementById('correo').value;
             mensaje = document.getElementById('mensaje').value;
             regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-
             if (nombre === "") {
                 $(idnombre).text('Debe Ingresar su nombre');
                 $(idnombre).show();
@@ -544,12 +544,10 @@
                     },
                     success: function () {
                         idmsjenviado.classList.add("show");
-                        $(idmsjenviado).show().fadeTo(4000, 0).slideUp(500, function () {
+                        $(idmsjenviado).show().fadeTo(5000, 0).slideUp(500, function () {
                             $(idmsjenviado).slideUp(500);
-
                             idmsjenviado.style.opacity = "1";
                         });
-
                     }
                 });
                 form.reset();
