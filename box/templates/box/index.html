@@ -9,9 +9,10 @@
 
     </div>
 
-    <!--Nosotros -->
+    <!--Nosotros-->
     <div class="container-fluid seccion" id="nosotros">
         <div class="row">
+
             <div class="col-sm-6">
                 <h2>Nosotros</h2>
                 <p>Somos Centro Ikigai, un espacio creado para todos aquellos terapeutas complementarios o profesionales
@@ -19,133 +20,121 @@
                     ocupándose de cada uno de sus detalles para lograr un espacio armónico, moderno y muy bien equipado,
                     en donde puedas atender a tus pacientes con el más alto estándar de calidad.</p>
             </div>
-            <div class="col-sm-6">
-                <!--Carousel-->
-                <!-- The slideshow -->
-                <div id="demo" class="carousel slideanim slide" data-ride="carousel">
 
-                    <!-- The slideshow -->
+            <div class="col-sm-6">
+                <div class="carousel slide">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="{% static 'images/slide/couching1-crop-u2690.jpg' %}" alt="Los Angeles">
+                            <img src="{% static 'images/slide/couching1-crop-u2690.jpg' %}" alt="slide">
                         </div>
                         <div class="carousel-item">
-                            <img src="{% static 'images/slide/couching2-crop-u2692.jpg' %}" alt="Chicago">
+                            <img src="{% static 'images/slide/couching2-crop-u2692.jpg' %}" alt="slide">
                         </div>
                         <div class="carousel-item">
-                            <img src="{% static 'images/slide/reiki1-crop-u2694.jpg' %}" alt="New York">
+                            <img src="{% static 'images/slide/reiki1-crop-u2694.jpg' %}" alt="slide">
                         </div>
                         <div class="carousel-item">
-                            <img src="{% static 'images/slide/reiki2-crop-u2688.jpg' %}" alt="New York">
+                            <img src="{% static 'images/slide/reiki2-crop-u2688.jpg' %}" alt="slide">
                         </div>
                     </div>
-
                 </div>
-                <!--Carousel-end-->
             </div>
+
         </div>
     </div>
-    <!--Fin Nosotros -->
+    <!--/Nosotros-->
 
-    <!-- Servicios -->
+    <!--Servicios-->
     <div class="text-center container-fluid seccion" id="servicios">
         <h2>Servicios</h2>
         <p>Te invitamos a ser parte de nuestro mundo Ikigai. Imposible no enamorarte de cada uno de los detalles que
             tenemos disponible para ti.</p>
         <br>
 
-        <div class="row slideanim service-item">
-
-            <div class="col-sm-4">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 slideanim">
                 <i class="fas fa-couch logo-small"></i>
                 <h4>EQUIPAMIENTO</h4>
                 <p>Mobiliario nuevo y de vanguardia</p>
             </div>
 
-            <div class="col-sm-4">
+            <div class="col-sm-6 col-md-4 slideanim">
                 <i class="fas fa-building logo-small"></i>
                 <h4>INFRAESTRUCTURA</h4>
                 <p>Instalaciones modernas</p>
             </div>
 
-            <div class="col-sm-4">
+            <div class="col-sm-6 col-md-4 slideanim">
                 <i class="fas fa-mobile-alt logo-small"></i>
                 <h4>ACCESIBILIDAD</h4>
                 <p>Facilidad para reservar tu box desde celulares o pc</p>
             </div>
 
-        </div>
-
-        <div class="row slideanim service-item">
-
-            <div class="col-sm-4">
+            <div class="col-sm-6 col-md-4 slideanim">
                 <i class="fab fa-pagelines logo-small"></i>
                 <h4>AMBIENTE</h4>
                 <p>Creado para entrar en un ambiente totalmente armónico de paz y buenas energías</p>
             </div>
 
-            <div class="col-sm-4">
+            <div class="col-sm-6 col-md-4 slideanim">
                 <i class="fas fa-wifi logo-small"></i>
                 <h4>WI-FI</h4>
                 <p>Wifi disponible y gratis</p>
             </div>
 
-            <div class="col-sm-4">
+            <div class="col-sm-6 col-md-4 slideanim">
                 <i class="fas fa-door-open logo-small"></i>
-                <h4 style="color:#303030;">ACCESO</h4>
+                <h4>ACCESO</h4>
                 <p>Acceso personalizado mediante clave en cerradura digital, lo que te permite una mayor
                     independencia</p>
             </div>
 
-        </div>
-
-        <div class="row slideanim service-item">
-
-            <div class="col-sm-4">
+            <div class="col-sm-6 col-md-4 slideanim">
                 <i class="fas fa-people-carry logo-small"></i>
-                <h4 style="color:#303030;">ADAPTABILIDAD</h4>
+                <h4>ADAPTABILIDAD</h4>
                 <p>Disponibilidad de implementos para profesionalizar tu atención, como balanza, camillas, pizarra,
                     cafeteras, nos adaptamos a tus necesidades</p>
             </div>
 
-            <div class="col-sm-4">
+            <div class="col-sm-6 col-md-4 slideanim">
                 <i class="fas fa-hand-holding-usd logo-small"></i>
-                <h4 style="color:#303030;">VALORES</h4>
+                <h4>VALORES</h4>
                 <p>Valores de mercado</p>
             </div>
 
-            <div class="col-sm-4">
+            <div class="col-sm-6 col-md-4 slideanim">
                 <i class="fas fa-hand-holding-heart logo-small"></i>
-                <h4 style="color:#303030;">PROMOCIONES</h4>
+                <h4>PROMOCIONES</h4>
                 <p>Acceso a promociones y mas beneficios para terapeutas socios</p>
             </div>
-
         </div>
     </div>
-    <!--Fin Servicios -->
+    <!--/Servicios-->
 
     <!--Box-->
     <div class="container-fluid text-center seccion" id="box">
 
-        <h2>Box</h2><br>
+        <h2>Box</h2>
         <h4>Encuentra el tuyo</h4>
-        <div class="row text-center justify-content-center slideanim">
+        <div class="row justify-content-center slideanim">
             {% if box %}
                 {% for b in box %}
                     <div class="flip-card col-10 col-sm-6 col-md-4 col-lg-3">
                         <div class="flip-card-inner">
-                            <div class="flip-card-front">
 
+                            <div class="flip-card-front">
                                 <img src="{{ b.imagen.url }}" alt="box">
                                 <div class="container">
                                     <h4><b style="color: gray">{{ b.nombre }}</b></h4>
                                 </div>
                             </div>
+
                             <div class="flip-card-back">
                                 <h3><strong>{{ b.nombre }}</strong></h3>
                                 <p>Equipamiento</p>
                                 <p class="equip">{{ b.equipamiento }}</p>
                             </div>
+
                         </div>
                     </div>
                 {% endfor %}
@@ -154,31 +143,27 @@
             {% endif %}
         </div>
     </div>
-    <!--Fin Box-->
+    <!--/Box-->
 
     <!--Valores-->
-    <div id="valores" class="container-fluid bg-grey seccion">
+    <div id="valores" class="container-fluid text-center bg-grey seccion">
 
-        <div class="text-center">
-            <h2>Valores</h2>
-            <h4><strong id="myBtn">Terminos y Condiciones</strong>, Lea detenidamente estas condiciones antes de acceder
-                a usar los servicios.</h4>
-        </div>
+        <h2>Valores</h2>
+        <h4><strong id="myBtn">Terminos y Condiciones</strong>, Lea detenidamente estas condiciones antes de acceder
+            a usar los servicios.</h4>
         <br>
 
         <div id="myModal" class="modal">
             <!-- Modal content -->
             <div class="modal-content">
+                <span class="close" style="font-size: 2.5rem; padding-left: 95%">&times;</span>
 
                 <div class="text-center">
-                    <span class="close" style="font-size: 2.5rem; color: #523ec3">&times;</span>
-                    <img src="{% static 'images/logo-ikigai-01.svg' %}" alt="logo"
-                         style="width: 200px; background-color: darkgray">
-
+                    <img src="{% static 'images/ikigai_logo.png' %}" alt="logo"
+                         style="width: 100px;">
                 </div>
-                <div>
-                    <p class="text-center"><strong>TERMINOS Y CONDICIONES</strong></p>
-
+                <div class="text-left">
+                    <p><b>TERMINOS Y CONDICIONES</b></p>
 
                     <p>Las presentes condiciones de uso (“Condiciones”) regulan el acceso on uso que usted haga, como
                         persona, desde cualquier país del mundo, de aplicaciones, web, contenidos, productos y servicios
@@ -343,15 +328,13 @@
                         Providencia y se someten a la jurisdicción de los Tribunales de Justicia de la ciudad de
                         Santiago.</p>
                 </div>
-                <button class="close2 btn btn-primary">Aceptar</button>
             </div>
-
         </div>
 
         <div class="row justify-content-center slideanim">
 
             <div class="col-9 col-sm-5 col-md-4 col-lg-3">
-                <div class="panel panel-default text-center">
+                <div class="panel panel-default">
 
                     <div class="panel-heading">
                         <h5>PRECIOS DE ARRIENDO POR HORA:</h5>
@@ -371,7 +354,7 @@
             </div>
 
             <div class="col-9 col-sm-7 col-md-6 col-lg-4">
-                <div class="panel panel-default text-center">
+                <div class="panel panel-default">
 
                     <div class="panel-heading">
                         <h5>PRECIOS DE ARRIENDO POR PAQUETE:</h5>
@@ -399,21 +382,18 @@
                     <p style="padding-bottom: 10px">* Valores IVA incluído.</p>
                 </div>
             </div>
-
         </div>
-
     </div>
-    <!--Fin Valores-->
+    <!--/Valores-->
 
-    <!--Donde Estamos-->
+    <!--Ubicacion-->
     <div id="ubicacion" class="text-center seccion">
         <h2>¿Dónde Estamos?</h2>
         <p>Metro Manuel Montt, Doctor Barros Borgoño 160, oficina 603, Providencia, Santiago.</p>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d372.3544840752147!2d-70.61946754401356!3d-33.433002936630814!2m3!1f0!2f39.202847431683516!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x9662cf7cd3e8af49%3A0x8a9d99ba969a4c42!2sDr+Manuel+Barros+Borgo%C3%B1o+160%2C+Providencia%2C+Regi%C3%B3n+Metropolitana!5e1!3m2!1ses-419!2scl!4v1563565099259!5m2!1ses-419!2scl"
-                height="500" frameborder="0" style="width:100%"></iframe>
+                height="400" frameborder="0" style="width:100%"></iframe>
     </div>
-    <!--Fin Donde Estamos-->
-
+    <!--Ubicacion-->
 
     <!--Contacto-->
     <div id="contacto" class="container-fluid bg-grey seccion">
@@ -426,15 +406,14 @@
                     escríbenos o llámanos y responderemos sus consultas rápidamente.</p>
                 <p><i class="fas fa-phone-square"></i>+56 2 3248 3019</p>
                 <p><i class="fas fa-mobile-alt"></i>+56 9 6142 0889</p>
-                <div>
-                    <p><i class="fas fa-at"></i>contacto@centroikigai.cl</p>
-                </div>
+                <p><i class="fas fa-at"></i>contacto@centroikigai.cl</p>
             </div>
 
             <form class="col-md-6" action="{% url 'box:consulta' %}" method="post" id="question_form">
                 {% csrf_token %}
                 <div class="slideanim">
                     <div class="row">
+
                         <div class="col-sm-6 col-md-12 col-lg-6 form-group">
                             <input class="form-control" id="nombre" name="nombre" placeholder="Nombre" type="text"
                                    maxlength="50">
@@ -450,16 +429,17 @@
 
                     <textarea class="form-control" id="mensaje" name="mensaje" placeholder="Mensaje"
                               rows="4" maxlength="170"></textarea>
+
                     <div class="alert p-1 mb-0 alert-warning collapse" id="valmensaje"></div>
 
                     <br>
 
-                    <div class="row justify-content-center" style="align-content: center">
+                    <div class="row">
                         <div class=" col-2 form-group">
                             <button class="btn btn-primary" type="submit">Enviar</button>
                         </div>
                         <div class="col-10">
-                            <div class="alert ml-3 p-1 mb-0 alert-success fade show" role="alert" id="msjEnviado">
+                            <div class="alert ml-3 p-1 mb-0 alert-success fade" role="alert" id="msjEnviado">
                                 Mensaje enviado correctamente
                             </div>
                         </div>
@@ -479,21 +459,16 @@
 
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
-        var button = document.getElementsByClassName("close2")[0];
 
         // When the user clicks the button, open the modal
         btn.onclick = function () {
             modal.style.display = "block";
-        }
+        };
 
         // When the user clicks on <span> (x), close the modal
         span.onclick = function () {
             modal.style.display = "none";
-        }
-
-        button.onclick = function () {
-            modal.style.display = "none";
-        }
+        };
 
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function (event) {

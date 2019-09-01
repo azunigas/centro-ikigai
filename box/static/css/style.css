@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    position: relative;
+}
+
 .navbar {
     background-image: linear-gradient(to top, #4645a1, #4844aa, #4b42b2, #4e40bb, #523ec3);
 }
@@ -16,7 +20,7 @@
 }
 
 .seccion {
-    padding: 15px 15px 15px 15px;
+    padding: 15px;
     font-family: 'Quicksand', sans-serif;
 }
 
