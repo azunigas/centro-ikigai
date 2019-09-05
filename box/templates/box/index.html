@@ -3,10 +3,9 @@
 {% block content %}
     {% load static %}
 
-    <div class="jumbotron jumbotron-fluid text-center" style="margin-bottom:0">
+    <div class="jumbotron jumbotron-fluid text-center">
         <img src="{% static 'images/logo-ikigai-01.svg' %}" alt="logo">
         <p>El lugar que buscabas</p>
-
     </div>
 
     <!--Nosotros-->
@@ -22,7 +21,7 @@
             </div>
 
             <div class="col-sm-6">
-                <div class="carousel slide">
+                <div class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="{% static 'images/slide/couching1-crop-u2690.jpg' %}" alt="slide">

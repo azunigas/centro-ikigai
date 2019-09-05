@@ -13,7 +13,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
-    <link rel=icon href={% static 'images/favicon.png' %} sizes="16x16" type="image/png">
+    <link rel=icon href={% static 'images/ikigai_logo.png' %} sizes="16x16" type="image/png">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 
@@ -28,7 +28,7 @@
 <body id="ikigai" data-spy="scroll" data-target=".mynav" data-offset="60">
 
 <!--Menu-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
     <a class="navbar-brand" href="#ikigai"><img src="{% static 'images/logo-ikigai-01.svg' %}" alt="logo"
                                                 style="width: 100px"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -37,23 +37,26 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end mynav" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#nosotros ">NOSOTROS</a>
+            <li class="nav-item">
+                <a class="nav-link" href="#nosotros">NOSOTROS</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="#servicios">SERVICIOS</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="#box">BOX</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="#valores">VALORES</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="#contacto">CONTACTO</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="#reserva">RESERVAS</a>
+            </li>
+            <li>
+                <button type="button" class="btn btn-success">Success</button>
             </li>
         </ul>
     </div>
