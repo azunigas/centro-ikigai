@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'reserva.apps.ReservaConfig',
     'box.apps.BoxConfig',
     'rest_framework',
     'posts',
