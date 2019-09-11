@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            background-color: #f1f1f1;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #navbar {
+            background-image: linear-gradient(to top, #4645a1, #4844aa, #4b42b2, #4e40bb, #523ec3);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: block;
+            transition: top 0.5s;
+        }
+
+        #navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .nav {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div id="navbar">
+    <div class="nav">
+        <a class="navbar-brand" href="{% url 'box:index' %}"><img src="{% static 'images/logo-ikigai-01.svg' %}" alt="logo"
+                                                                  style="width: 100px"></a>
+        <a href="{% url 'box:index' %}">Inicio</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+    </div>
+</div>
+
+{% block content %}
+
+{% endblock %}
+
+
+
+
+<script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+        } else {
+            document.getElementById("navbar").style.top = "-75px";
+        }
+        prevScrollpos = currentScrollPos;
+    }
+</script>
+
+
+
+</body>
+</html>

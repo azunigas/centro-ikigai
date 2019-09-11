@@ -15,8 +15,7 @@ body {
 .jumbotron {
     background-image: linear-gradient(to top, #8e9dec, #8694e9, #7d8ce6, #7583e2, #6d7adf, #6873e0, #636ce1, #5e65e2, #5d5ee7, #5d55ec, #5f4cf1, #6341f4);
     color: #fff;
-    padding: 30px 25px;
-    border-radius: 0;
+    margin-bottom:0
 }
 
 .seccion {
