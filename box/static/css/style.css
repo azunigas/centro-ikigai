@@ -19,7 +19,7 @@ body {
 }
 
 .seccion {
-    padding: 15px;
+    padding: 60px 15px 15px 15px;
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -29,12 +29,19 @@ body {
 }
 
 #servicios {
-    background-color: #fcfcfc;
+    background-color: #eee;
+}
+
+#servicios h4{
+}
+
+#servicios h4{
+    font-size: 2vmax;
 }
 
 .logo-small {
     color: #6341f4;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 /*Slide*/
@@ -124,7 +131,7 @@ body {
 /*Valores*/
 
 #valores {
-    background-color: #fcfcfc;
+    background-color: #eee;
 }
 
 .panel {
@@ -172,7 +179,7 @@ body {
 /*Contacto*/
 
 #contacto {
-    background-color: #fcfcfc;
+    background-color: #eee;
 }
 
 p i {
