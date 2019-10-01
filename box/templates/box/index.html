@@ -112,30 +112,25 @@
 
     <!--Box-->
     <div class="container-fluid text-center seccion" id="box">
-
-        <h2>Box</h2>
-        <h4>Encuentra el tuyo</h4>
+        <h2>Nuestros Box</h2>
         <div class="row justify-content-center slideanim">
             {% if box %}
                 {% for b in box %}
-                    <div class="flip-card col-10 col-sm-6 col-md-4 col-lg-3">
-                        <div class="flip-card-inner">
 
-                            <div class="flip-card-front">
-                                <img src="{{ b.imagen.url }}" alt="box">
-                                <div class="container">
-                                    <h4><b style="color: gray">{{ b.nombre }}</b></h4>
-                                </div>
-                            </div>
-
-                            <div class="flip-card-back">
-                                <h3><strong>{{ b.nombre }}</strong></h3>
-                                <p>Equipamiento</p>
-                                <p class="equip">{{ b.equipamiento }}</p>
-                            </div>
-
+                    <div class="card m-3" style="width: 20rem;">
+                        <img src="{{ b.imagen.url }}" class="card-img-top" alt="Box">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ b.nombre }}</h5>
+                            <p class="card-text">{{ b.equipamiento }}</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Cras justo odio</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="btn btn-primary">Reservar</a>
                         </div>
                     </div>
+
                 {% endfor %}
             {% else %}
                 <p>Agregar Box</p><i class="far fa-grin-beam-sweat"></i>
@@ -143,6 +138,7 @@
         </div>
     </div>
     <!--/Box-->
+
 
     <!--Valores-->
     <div id="valores" class="container-fluid text-center bg-grey seccion">

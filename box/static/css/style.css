@@ -19,7 +19,7 @@ body {
 }
 
 .seccion {
-    padding: 60px 15px 15px 15px;
+    padding: 60px 30px 15px 30px;
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -45,14 +45,8 @@ body {
 }
 
 /*Slide*/
-.slideshow {
-    position: relative;
-}
-
-.slideshow img {
-    position: absolute;
+.carousel img {
     width: 100%;
-    height: 450px;
 }
 
 /*Fin Slide*/
