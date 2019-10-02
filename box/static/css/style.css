@@ -9,11 +9,11 @@ body {
 }
 
 .navbar {
-    background-image: linear-gradient(to top, #4645a1, #4844aa, #4b42b2, #4e40bb, #523ec3);
+    background: linear-gradient(180deg, rgba(75,43,177,1) 0%, rgba(82,55,214,1) 100%);
 }
 
 .jumbotron {
-    background-image: linear-gradient(to top, #8e9dec, #8694e9, #7d8ce6, #7583e2, #6d7adf, #6873e0, #636ce1, #5e65e2, #5d5ee7, #5d55ec, #5f4cf1, #6341f4);
+    background: linear-gradient(180deg, rgba(75,43,177,1) 0%, rgba(122,143,242,1) 100%);
     color: #fff;
     margin-bottom:0
 }
@@ -23,13 +23,14 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
+.title{
+    font-family: 'Oswald', sans-serif;
+    color: #686868;
+}
+
 #nosotros {
     font-size: 17px;
     text-align: justify;
-}
-
-#servicios {
-    background-color: #eee;
 }
 
 #servicios h4{
@@ -58,75 +59,7 @@ body {
 
 /*Fin Social*/
 
-/* Box Flip Cards*/
-
-.flip-card {
-    margin: 15px 0 15px 0;
-    height: 350px;
-    perspective: 2500px;
-}
-
-.flip-card-front {
-    background-color: white;
-}
-
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.flip-card-front img {
-    border-radius: 5px 5px 0 0;
-    width: 100%;
-    height: 300px;
-}
-
-.flip-card-front {
-    color: black;
-}
-
-.flip-card-front .container h4 {
-    margin: 0;
-    padding: 10px;
-}
-
-.flip-card-back {
-    padding: 30px 5px 5px 5px;
-    background: linear-gradient(0deg, rgba(35, 38, 153, 1) 0%, rgba(35, 81, 168, 1) 35%, rgba(143, 148, 247, 1) 100%);
-    color: white;
-    transform: rotateY(180deg);
-}
-
-.equip {
-    padding: 0 25px 10px 25px;
-    font-size: 110%;
-}
-
-/*Fin Box Flip Cards*/
-
 /*Valores*/
-
-#valores {
-    background-color: #eee;
-}
 
 .panel {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -171,10 +104,6 @@ body {
 /*Fin Valores*/
 
 /*Contacto*/
-
-#contacto {
-    background-color: #eee;
-}
 
 p i {
     font-size: 20px;
@@ -270,4 +199,119 @@ p i {
 #myBtn:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 40px;
+}
+.price-card{
+    position: relative;
+    max-width: 300px;
+    height: auto;
+    background: linear-gradient(-45deg,#fe0847,#feae3f);
+    border-radius: 15px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    -webkit-box-shadow: 0 10px 15px rgba(0,0,0,.1) ;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1) ;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+.price-card:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.col-sm-4:nth-child(1) .price-card ,
+.col-sm-4:nth-child(1) .price-card .title .fa{
+    background: linear-gradient(-45deg,#f403d1,#64b5f6);
+
+}
+.col-sm-4:nth-child(2) .price-card,
+.col-sm-4:nth-child(2) .price-card .title .fa{
+    background: linear-gradient(-45deg,#ffec61,#f321d7);
+
+}
+.col-sm-4:nth-child(3) .price-card,
+.col-sm-4:nth-child(3) .price-card .title .fa{
+    background: linear-gradient(-45deg,#24ff72,#9a4eff);
+
+}
+.price-card::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: rgba(255, 255, 255, .1);
+    z-index: 1;
+    -webkit-transform: skewY(-5deg) scale(1);
+    transform: skewY(-5deg) scale(1);
+}
+.title .fa{
+    color:#fff;
+    font-size: 60px;
+    width: 100px;
+    height: 100px;
+    border-radius:  50%;
+    text-align: center;
+    line-height: 100px;
+    -webkit-box-shadow: 0 10px 10px rgba(0,0,0,.1) ;
+    box-shadow: 0 10px 10px rgba(0,0,0,.1) ;
+
+}
+.title h2 {
+    position: relative;
+    margin: 20px  0 0;
+    padding: 0;
+    color: #fff;
+    font-size: 28px;
+    z-index: 2;
+}
+.price,.option{
+    position: relative;
+    z-index: 2;
+}
+.price h4 {
+    margin: 0;
+    padding: 20px 0 ;
+    color: #fff;
+    font-size: 60px;
+}
+.option ul {
+    margin: 0;
+    padding: 0;
+
+}
+.option ul li {
+    margin: 0 0 10px;
+    padding: 0;
+    list-style: none;
+    color: #fff;
+    font-size: 16px;
+}
+.price-card a {
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    color : black;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 40px;
+    display: block;
+    text-align: center;
+    margin: 20px auto 0 ;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+
+}
+.price-card a:hover{
+    text-decoration: none;
 }

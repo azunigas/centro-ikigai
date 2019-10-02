@@ -5,7 +5,8 @@ from django.db import models
 
 class Box(models.Model):
     nombre = models.CharField(max_length=15)
-    equipamiento = models.TextField(max_length=200)
+    equipamiento = models.TextField(max_length=170)
+    proposito = models.TextField(max_length=150, default='')
     imagen = models.ImageField()
 
     def __str__(self):
