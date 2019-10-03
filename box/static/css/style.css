@@ -50,16 +50,52 @@ body {
     width: 100%;
 }
 
-/*Fin Slide*/
+/*--------------------------------------------------------------------------------------------------------------------*/
 
 /*Social*/
 .social p a i {
     padding: 0 5px 0 0;
 }
-
-/*Fin Social*/
+/*--------------------------------------------------------------------------------------------------------------------*/
 
 /*Valores*/
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    -webkit-overflow-scrolling: touch;
+    max-height: calc(100vh - 170px);
+    overflow-y: auto;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 40px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+
+#myBtn {
+    color: cornflowerblue;
+}
+
+#myBtn:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .panel {
     margin: 10px;
     border-radius: 10px;
@@ -111,15 +147,14 @@ body {
 .inf {
     font-size: 13px;
 }
-/*Fin Valores*/
+/*--------------------------------------------------------------------------------------------------------------------*/
 
 /*Contacto*/
 p i {
     font-size: 20px;
     padding: 0 5px 0 0;
 }
-
-/*Fin Contacto*/
+/*--------------------------------------------------------------------------------------------------------------------*/
 
 .footer {
     text-align: center;
@@ -172,40 +207,4 @@ p i {
         -webkit-transform: translateY(0%);
     }
 }
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-    -webkit-overflow-scrolling: touch;
-    max-height: calc(100vh - 170px);
-    overflow-y: auto;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 40px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-/* The Close Button */
-
-#myBtn {
-    color: cornflowerblue;
-}
-
-#myBtn:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
+/*--------------------------------------------------------------------------------------------------------------------*/
